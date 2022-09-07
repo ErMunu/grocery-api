@@ -13,9 +13,9 @@ Create .env with following variables
 Run `npm start`
 
 ## Api url
-- Api to fetch Customers list: `/customers`
-- Api to fetch specific Customer Orders List: `/customers/{id}/orders`
-- Api to fetch customer Details with maximum Orders in an year: `/customers/max-orders`
-- Api to create new Customer: `/customers/new`
-- Api to create new Product: `/products/new`
-- API to update Product Price: `/products/{id}/price-update`
+- Api to fetch Customers list: get `/customers`
+- Api to fetch specific Customer Orders List: get `/customers/{id}/orders`
+- Api to fetch customer Details with maximum Orders in an year: get `/customers/max-orders`
+- Api to create new Customer: post `/customers/new` : req.body => {email, name, phone}
+- Api to create new Product: post `/products/new` : req.body => {productCategory, productInfo, price, quantityAvailable}
+- API to update Product Price: post `/products/{id}/price-update`: req.body => {price}
