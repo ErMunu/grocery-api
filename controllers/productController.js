@@ -25,7 +25,7 @@ module.exports.createProduct = async function (req, res) {
 module.exports.updatePrice = async function (req, res) {
     try {
         let product = await Product.findById(req.params.id);
-        let price = parseInt(req.query.price);
+        let price = parseInt(req.body.price);
         if (price < 0) {
             return res.status(200).json({
                 data: {
